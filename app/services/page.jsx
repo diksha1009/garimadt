@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Services',
   description:
-    'Personalised diet plans, nutritional counselling and online consultations for weight management, PCOS/PCOD, diabetes, hypertension, gym nutrition, pediatric nutrition and therapeutic diets.',
+    'Personalised diet plans, nutritional counselling and online consultations for weight management, PCOS/PCOD, thyroid, diabetes, hypertension, pre-wedding plans, pediatric nutrition and therapeutic diets.',
   alternates: { canonical: '/services/' },
 };
 
@@ -20,13 +20,28 @@ const SERVICES = [
     ),
   },
   {
-    title: 'PCOS / PCOD & Hormonal Health',
+    title: 'PCOS / PCOD Diet',
     text: 'Targeted nutrition to manage PCOS/PCOD symptoms, support regular cycles, improve energy and restore hormonal balance.',
     points: ['Insulin-resistance friendly meal planning', 'Anti-inflammatory food choices', 'Support for skin, hair and cycle health'],
     icon: (
       <>
         <circle cx="12" cy="8" r="5" />
         <path d="M12 13v8M8 18h8" />
+      </>
+    ),
+  },
+  {
+    title: 'Thyroid Management',
+    text: 'Nutrition support for hypothyroidism and hyperthyroidism — helping manage weight, fatigue and metabolism alongside your medication.',
+    points: [
+      'Iodine, selenium and iron-aware meal planning',
+      'Guidance on goitrogens and medication timing',
+      'Strategies for thyroid-related weight and energy issues',
+    ],
+    icon: (
+      <>
+        <path d="M12 3v3M8 6c-2 1-3 3-3 5 0 3 2 5 4 5 1.5 0 2.2-1 3-1s1.5 1 3 1c2 0 4-2 4-5 0-2-1-4-3-5" />
+        <path d="M9 6c1.5-1 4.5-1 6 0" />
       </>
     ),
   },
@@ -53,10 +68,19 @@ const SERVICES = [
     ),
   },
   {
-    title: 'Gym & Sports Nutrition',
-    text: 'Fuel your training with the right nutrition — muscle gain, fat loss or performance, matched to your workout schedule.',
-    points: ['Protein-optimised meal timing', 'Pre & post-workout nutrition', 'Supplement guidance where genuinely needed'],
-    icon: <path d="M6 5v14M18 5v14M6 12h12M3 8v8M21 8v8" />,
+    title: 'Pre-Wedding Plans',
+    text: 'Look and feel your best on the big day. A time-bound plan for inch loss, glowing skin, healthy hair and steady energy through the wedding season.',
+    points: [
+      'Timeline-based plan built around your wedding date',
+      'Nutrition for skin glow, hair health and bloating',
+      'Smart eating through functions, feasts and travel',
+    ],
+    icon: (
+      <>
+        <path d="M12 21s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 9a3.5 3.5 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z" />
+        <path d="M12 5V3M10 4h4" />
+      </>
+    ),
   },
   {
     title: 'Pediatric Nutrition',
@@ -71,7 +95,7 @@ const SERVICES = [
   },
   {
     title: 'Therapeutic Diets',
-    text: 'Medical nutrition therapy for thyroid disorders, fatty liver, kidney health, gut issues, anaemia and post-surgery recovery.',
+    text: 'Medical nutrition therapy for fatty liver, kidney health, gut issues, anaemia, uric acid and post-surgery recovery.',
     points: ['Condition-specific clinical diet plans', 'PGIMER-trained clinical approach', 'Works alongside your medical treatment'],
     icon: (
       <>

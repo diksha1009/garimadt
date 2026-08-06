@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { REVIEW_FORM_URL } from '../lib/site';
 
 export default function Footer() {
   return (
@@ -28,7 +29,8 @@ export default function Footer() {
               <li><Link href="/services/">Weight Management</Link></li>
               <li><Link href="/services/">PCOS / PCOD Diet</Link></li>
               <li><Link href="/services/">Diabetes &amp; Hypertension</Link></li>
-              <li><Link href="/services/">Gym Nutrition</Link></li>
+              <li><Link href="/services/">Thyroid Management</Link></li>
+              <li><Link href="/services/">Pre-Wedding Plans</Link></li>
             </ul>
           </div>
           <div>
@@ -41,6 +43,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>🕐 Mon–Sat: 10 AM – 1 PM, 2 – 5 PM</li>
+              {REVIEW_FORM_URL && (
+                <li>
+                  <a href={REVIEW_FORM_URL} target="_blank" rel="noopener noreferrer">
+                    ⭐ Write a Review
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

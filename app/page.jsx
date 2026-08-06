@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
-const WA_LINK =
-  'https://wa.me/917340940620?text=Hi%20Dt.%20Garima%2C%20I%27d%20like%20to%20book%20a%20consultation.';
+import { WA_LINK, REVIEW_FORM_URL } from '../lib/site';
 
 const CLINIC_JSONLD = {
   '@context': 'https://schema.org',
@@ -57,8 +55,13 @@ const SPECIALIZATIONS = [
     icon: <><circle cx="12" cy="8" r="5" /><path d="M12 13v8M8 18h8" /></>,
   },
   {
-    label: 'Gym & Sports Nutrition',
-    icon: <path d="M6 5v14M18 5v14M6 12h12M3 8v8M21 8v8" />,
+    label: 'Thyroid Management',
+    icon: (
+      <>
+        <path d="M12 3v3M8 6c-2 1-3 3-3 5 0 3 2 5 4 5 1.5 0 2.2-1 3-1s1.5 1 3 1c2 0 4-2 4-5 0-2-1-4-3-5" />
+        <path d="M9 6c1.5-1 4.5-1 6 0" />
+      </>
+    ),
   },
   {
     label: 'Diabetes Mellitus Type 2',
@@ -74,8 +77,13 @@ const SPECIALIZATIONS = [
     ),
   },
   {
-    label: 'Hormonal Imbalance',
-    icon: <><circle cx="12" cy="5" r="3" /><path d="M5 22c1-5 3-8 7-8s6 3 7 8M4 11l4 2M20 11l-4 2" /></>,
+    label: 'Pre-Wedding Plans',
+    icon: (
+      <>
+        <path d="M12 21s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 9a3.5 3.5 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z" />
+        <path d="M12 5V3M10 4h4" />
+      </>
+    ),
   },
   {
     label: 'Pediatric Nutrition',
@@ -314,7 +322,6 @@ export default function HomePage() {
                 'M.Sc. Food & Nutrition',
                 'Intern, PGIMER Chandigarh',
                 'Former Dietitian, Fitelo',
-                'Pursuing PhD in Food & Nutrition',
               ].map((item) => (
                 <li key={item}>
                   <CheckIcon stroke="#ffc79e" />
@@ -362,6 +369,7 @@ export default function HomePage() {
           <div className="section-head reveal">
             <span className="section-kicker">Client Stories</span>
             <h2 id="testimonial-title">What clients say</h2>
+            <p>Real results from real people — one plan at a time.</p>
           </div>
 
           <div className="card-grid">
@@ -379,6 +387,23 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+
+          {REVIEW_FORM_URL && (
+            <div className="review-invite reveal">
+              <p>Been on a plan with me? Your story could help someone else get started.</p>
+              <a
+                className="btn btn-outline"
+                href={REVIEW_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                Share Your Experience
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

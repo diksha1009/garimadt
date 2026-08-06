@@ -537,6 +537,20 @@ section { padding: 4.5rem 0; }
 .testimonial footer strong { display: block; font-size: 0.95rem; color: var(--green-900); }
 .testimonial footer span { font-size: 0.82rem; color: var(--ink-soft); }
 
+/* ---------- Review invite ---------- */
+.review-invite {
+  margin-top: 2.4rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.review-invite p {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
 /* ---------- CTA band ---------- */
 .cta-band {
   background:
