@@ -1,5 +1,5 @@
 /* ============================================================
-   Dt. Garima Goel — Diet Clinic
+   Poshan by Dt. Garima — Clinical Nutrition & Lifestyle Care
    Theme: cream base, deep green primary, warm orange accent
    ============================================================ */
 
@@ -21,7 +21,8 @@
   --radius-sm: 12px;
   --shadow:    0 10px 30px rgba(28, 58, 26, 0.10);
   --shadow-sm: 0 4px 14px rgba(28, 58, 26, 0.08);
-  /* --font-display / --font-body are injected by next/font in app/layout.jsx */
+  /* --font-display (Source Serif 4) and --font-body (Inter) are injected
+     by next/font in app/layout.jsx. */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,8 +33,8 @@ body {
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--cream);
-  line-height: 1.65;
-  font-size: 17px;
+  line-height: 1.7;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -52,9 +53,10 @@ h1, h2, h3, h4 {
   color: var(--green-900);
   line-height: 1.15;
   font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
-h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
+h1 { font-size: clamp(2.15rem, 5vw, 3.35rem); font-weight: 700; }
 h2 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); }
 h3 { font-size: 1.25rem; }
 
@@ -63,7 +65,7 @@ h3 { font-size: 1.25rem; }
   align-items: center;
   gap: 0.5rem;
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--orange-600);
@@ -96,8 +98,8 @@ section { padding: 4.5rem 0; }
   gap: 0.55rem;
   padding: 0.85rem 1.7rem;
   border-radius: 999px;
-  font-weight: 800;
-  font-size: 1rem;
+  font-weight: 650;
+  font-size: 0.98rem;
   border: 2px solid transparent;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
@@ -155,30 +157,71 @@ section { padding: 4.5rem 0; }
   gap: 0.7rem;
 }
 
+/* Logo artwork, scaled to fit the header bar by height.
+   Supply a trimmed file (no empty margin) on a transparent or cream
+   background — --logo-h is the only knob that should need touching. */
+.brand-logo {
+  --logo-h: 62px;
+  display: block;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.brand-logo img {
+  height: var(--logo-h);
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .brand-logo { --logo-h: 48px; }
+}
+
+/* Descriptor sits beside the mark, separated by a hairline rule */
+.brand-descriptor {
+  padding-left: 0.85rem;
+  margin-left: 0.15rem;
+  border-left: 1px solid var(--green-100);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--green-700);
+  white-space: nowrap;
+}
+
+/* Header gets crowded on phones — the descriptor still reads in the hero
+   and footer, so it steps aside here. */
+@media (max-width: 860px) {
+  .brand-descriptor { display: none; }
+}
+
 .brand-mark {
   width: 46px;
   height: 46px;
-  border-radius: 14px;
-  background: var(--green-700);
   display: grid;
   place-items: center;
-  color: #fff;
   flex-shrink: 0;
 }
 
-.brand-text { line-height: 1.15; }
+.brand-text { line-height: 1.2; }
 .brand-text strong {
   font-family: var(--font-display);
-  font-size: 1.18rem;
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--green-900);
   display: block;
 }
 .brand-text span {
-  font-size: 0.74rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  display: block;
+  font-size: 0.82rem;
+  font-style: italic;
   color: var(--orange-600);
-  font-weight: 800;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .main-nav ul {
@@ -240,7 +283,7 @@ section { padding: 4.5rem 0; }
   border-radius: 999px;
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--green-700);
   box-shadow: var(--shadow-sm);
   margin-bottom: 1.3rem;
@@ -306,7 +349,7 @@ section { padding: 4.5rem 0; }
   box-shadow: var(--shadow);
   padding: 0.7rem 1rem;
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--green-900);
   display: flex;
   align-items: center;
@@ -316,6 +359,61 @@ section { padding: 4.5rem 0; }
 .hero-badge svg { width: 22px; height: 22px; flex-shrink: 0; }
 .hero-badge.b1 { top: 6%; right: 4%; }
 .hero-badge.b2 { bottom: 8%; left: 0; }
+
+/* ---------- Brand pillars (Nourish · Balance · Thrive) ---------- */
+.pillars-band {
+  padding: 2.6rem 0;
+  background: var(--white);
+  border-block: 1px solid var(--green-100);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pillar {
+  text-align: center;
+  padding-inline: 1rem;
+  position: relative;
+}
+
+/* thin dividers between pillars, echoing the logo lockup */
+.pillar + .pillar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 1px;
+  background: var(--green-100);
+}
+
+.pillar-icon { color: var(--green-700); display: inline-block; }
+.pillar:nth-child(2) .pillar-icon { color: var(--orange-500); }
+
+.pillar strong {
+  display: block;
+  margin: 0.5rem 0 0.3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green-900);
+  font-weight: 600;
+}
+
+.pillar p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+@media (max-width: 700px) {
+  .pillars-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .pillar + .pillar::before { display: none; }
+}
 
 /* ---------- Cards / grids ---------- */
 .card-grid {
@@ -368,7 +466,7 @@ section { padding: 4.5rem 0; }
   border: 1px solid var(--green-100);
   border-radius: var(--radius-sm);
   padding: 1rem 1.2rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--green-900);
   box-shadow: var(--shadow-sm);
   transition: transform 0.15s ease;
@@ -449,7 +547,7 @@ section { padding: 4.5rem 0; }
 
 .about-figure .role {
   color: #ffd9bd;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -503,7 +601,7 @@ section { padding: 4.5rem 0; }
   margin-top: 1rem;
   font-family: var(--font-body);
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -528,7 +626,7 @@ section { padding: 4.5rem 0; }
   border-radius: 50%;
   background: var(--green-100);
   color: var(--green-700);
-  font-weight: 800;
+  font-weight: 600;
   display: grid;
   place-items: center;
   font-family: var(--font-display);
@@ -702,7 +800,7 @@ section { padding: 4.5rem 0; }
 
 .contact-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
 .contact-card p, .contact-card a { font-size: 1rem; color: var(--ink-soft); }
-.contact-card a.big { font-size: 1.15rem; font-weight: 800; color: var(--green-700); }
+.contact-card a.big { font-size: 1.15rem; font-weight: 600; color: var(--green-700); }
 
 .hours-table {
   width: 100%;
@@ -729,6 +827,222 @@ section { padding: 4.5rem 0; }
 
 .hours-table tr:last-child td { border-bottom: none; }
 
+/* ---------- Program / pricing cards ---------- */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.program-grid.single {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.program-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 2px solid var(--green-100);
+  border-radius: var(--radius);
+  padding: 2rem 1.7rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.program-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
+/* The recommended tier is marked by colour, not by a thicker border,
+   so all three cards stay the same size. */
+.program-card.popular {
+  border-color: var(--orange-500);
+  box-shadow: var(--shadow);
+}
+
+.program-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange-500);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.program-emoji { font-size: 1.7rem; line-height: 1; }
+
+.program-card h3 { margin-top: 0.6rem; font-size: 1.22rem; }
+
+.program-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-600);
+  margin-top: 0.3rem;
+}
+
+.program-price {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--green-700);
+  line-height: 1.1;
+  margin: 0.5rem 0 0.7rem;
+}
+
+.program-for {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--green-100);
+}
+
+.program-for strong { color: var(--green-900); }
+
+.program-features {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.1rem 0 1.6rem;
+  flex-grow: 1;
+}
+
+.program-features li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.program-features svg { color: var(--green-500); flex-shrink: 0; margin-top: 4px; }
+
+.program-more { font-style: italic; opacity: 0.75; padding-left: 1.3rem; }
+
+.program-cta {
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Consultation entry point below the pricing grid */
+.consult-strip {
+  margin-top: 2.4rem;
+  background: var(--green-50);
+  border: 1px dashed var(--green-500);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.consult-strip h3 { font-size: 1.15rem; margin-bottom: 0.3rem; }
+.consult-strip p { color: var(--ink-soft); font-size: 0.95rem; max-width: 44rem; }
+
+.program-terms-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.program-terms-note a { text-decoration: underline; }
+
+@media (max-width: 620px) {
+  .consult-strip { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- Work ethics / policy page ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.policy-wrap {
+  max-width: 780px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1.3rem;
+}
+
+.policy-block {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 1.3rem;
+  background: var(--white);
+  border: 1px solid var(--green-100);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.policy-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--orange-500);
+  line-height: 1;
+}
+
+.policy-block h3 { margin-bottom: 0.8rem; }
+
+.policy-block ul {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.policy-block li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+
+.policy-block li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-500);
+}
+
+.policy-footnote {
+  max-width: 780px;
+  margin: 2.2rem auto 0;
+  padding: 1.3rem 1.6rem;
+  background: var(--green-50);
+  border-left: 4px solid var(--green-500);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 620px) {
+  .policy-block { grid-template-columns: 1fr; gap: 0.6rem; padding: 1.4rem 1.3rem; }
+}
+
 /* ---------- FAQ ---------- */
 .faq-list { display: grid; gap: 0.9rem; max-width: 760px; margin-inline: auto; }
 
@@ -741,7 +1055,7 @@ section { padding: 4.5rem 0; }
 }
 
 .faq-list summary {
-  font-weight: 800;
+  font-weight: 600;
   color: var(--green-900);
   cursor: pointer;
   list-style: none;
@@ -792,6 +1106,15 @@ section { padding: 4.5rem 0; }
 .site-footer a:hover { color: #ffc79e; }
 
 .footer-brand p { font-size: 0.94rem; margin-top: 0.8rem; max-width: 26rem; }
+
+.footer-descriptor {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffc79e;
+  margin-top: 0.35rem !important;
+}
 
 .footer-tagline {
   font-family: var(--font-display);

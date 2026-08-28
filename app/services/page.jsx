@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Services',
+  title: 'Specialities',
   description:
     'Personalised diet plans, nutritional counselling and online consultations for weight management, PCOS/PCOD, thyroid, diabetes, hypertension, pre-wedding plans, pediatric nutrition and therapeutic diets.',
   alternates: { canonical: '/services/' },
@@ -132,9 +132,9 @@ export default function ServicesPage() {
       <section className="page-hero">
         <div className="container">
           <p className="breadcrumb">
-            <Link href="/">Home</Link> / Services
+            <Link href="/">Home</Link> / Specialities
           </p>
-          <h1>Services &amp; Specialities</h1>
+          <h1>How I Can Help You</h1>
           <p>
             One-on-one nutritional consultancy — online, personalised and backed by clinical
             training. Whatever your goal, there&apos;s a plan for it.

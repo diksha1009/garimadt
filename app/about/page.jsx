@@ -107,7 +107,7 @@ export default function AboutPage() {
               if people can actually follow it in their daily lives.
             </p>
             <p style={{ marginTop: '0.8rem', color: 'var(--ink-soft)' }}>
-              Today, at Dt. Garima&apos;s Diet Clinic, I combine both — rigorous, evidence-based
+              Today, at Poshan, I combine both — rigorous, evidence-based
               nutrition science delivered as simple, realistic plans built around Indian kitchens,
               family meals and busy schedules.
             </p>
@@ -216,7 +216,7 @@ export default function AboutPage() {
             <div className="actions">
               <Link className="btn btn-primary" href="/contact/">Book Consultation</Link>
               <Link className="btn btn-outline" href="/services/" style={{ borderColor: '#fff', color: '#fff' }}>
-                View Services
+                View Specialities
               </Link>
             </div>
           </div>

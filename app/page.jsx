@@ -1,13 +1,16 @@
 import Link from 'next/link';
+import ProgramCard from '../components/ProgramCard';
+import { CORE_PROGRAMS, CONSULTATION } from '../lib/programs';
 import { WA_LINK, REVIEW_FORM_URL } from '../lib/site';
 
 const CLINIC_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
   '@id': 'https://www.dtgarimagoel.com/#clinic',
-  name: "Dt. Garima's Diet Clinic",
+  name: 'Poshan by Dt. Garima',
+  alternateName: "Dt. Garima's Diet Clinic",
   description:
-    'Personalised diet plans and online nutrition consultations for a healthy and disease-free lifestyle.',
+    'Clinical nutrition and lifestyle care — personalised diet plans and online consultations for a healthy, disease-free life.',
   url: 'https://www.dtgarimagoel.com/',
   telephone: '+91-7340940620',
   sameAs: ['https://www.instagram.com/nutrinator_'],
@@ -95,6 +98,41 @@ const SPECIALIZATIONS = [
   },
 ];
 
+const PILLARS = [
+  {
+    label: 'Nourish',
+    text: 'Real food, real nutrients — built from your own kitchen.',
+    icon: (
+      <>
+        <path d="M4 12h16c0 4.4-3.6 8-8 8s-8-3.6-8-8Z" />
+        <path d="M12 9c-.5-3 1-5.5 4-6.5.5 3-1 5.5-4 6.5Z" />
+        <path d="M12 9c-2.5-.5-4-2.5-3.7-5 2.5.5 4 2.5 3.7 5Z" />
+      </>
+    ),
+  },
+  {
+    label: 'Balance',
+    text: 'Sustainable habits that work with your body, not against it.',
+    icon: (
+      <>
+        <path d="M12 20.5C7.5 17 4 13.8 4 10.2A4 4 0 0 1 12 8a4 4 0 0 1 8 2.2c0 3.6-3.5 6.8-8 10.3Z" />
+        <path d="M6.5 12h3l1.5-2.5 2 5 1.5-2.5h3" />
+      </>
+    ),
+  },
+  {
+    label: 'Thrive',
+    text: 'Lasting energy, better reports, a healthier life ahead.',
+    icon: (
+      <>
+        <path d="M12 21v-7" />
+        <path d="M12 14c-4 0-7-2.7-7-6.5S8 2 12 2s7 1.7 7 5.5S16 14 12 14Z" />
+        <path d="M9 21h6" />
+      </>
+    ),
+  },
+];
+
 const STEPS = [
   {
     title: 'Book Your Consultation',
@@ -150,7 +188,7 @@ export default function HomePage() {
       <section className="hero" aria-label="Introduction">
         <div className="container hero-grid">
           <div>
-            <span className="hero-eyebrow">🥗 For a healthy &amp; disease-free lifestyle</span>
+            <span className="hero-eyebrow">🌿 Clinical Nutrition &amp; Lifestyle Care</span>
             <h1>
               Nutrition that fits <em>your life</em>, not the other way around.
             </h1>
@@ -161,7 +199,7 @@ export default function HomePage() {
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href="/contact/">Book a Consultation</Link>
-              <Link className="btn btn-outline" href="/services/">Explore Services</Link>
+              <Link className="btn btn-outline" href="/services/">View Specialities</Link>
             </div>
             <div className="hero-stats">
               <div><strong>M.Sc.</strong><span>Food &amp; Nutrition</span></div>
@@ -206,6 +244,23 @@ export default function HomePage() {
               Online Consultations
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ============ BRAND PILLARS ============ */}
+      <section className="pillars-band" aria-label="Our approach">
+        <div className="container pillars-grid">
+          {PILLARS.map(({ label, text, icon }) => (
+            <div className="pillar reveal" key={label}>
+              <span className="pillar-icon" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  {icon}
+                </svg>
+              </span>
+              <strong>{label}</strong>
+              <p>{text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -310,8 +365,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ PROGRAMS & PRICING ============ */}
+      <section className="alt-band" aria-labelledby="programs-title">
+        <div className="container">
+          <div className="section-head reveal">
+            <span className="section-kicker">Programs</span>
+            <h2 id="programs-title">Choose your nutrition journey</h2>
+            <p>Personalised nutrition. Practical food. Sustainable change.</p>
+          </div>
+
+          <div className="program-grid reveal">
+            {CORE_PROGRAMS.map((p) => (
+              <ProgramCard key={p.id} program={p} compact />
+            ))}
+          </div>
+
+          <div className="consult-strip reveal">
+            <div>
+              <h3>Not sure which program is right for you?</h3>
+              <p>
+                Book a {CONSULTATION.duration} {CONSULTATION.name} —{' '}
+                <strong>{CONSULTATION.priceLabel}</strong>. {CONSULTATION.note}
+              </p>
+            </div>
+            <Link className="btn btn-primary" href="/programs/">See All Programs</Link>
+          </div>
+        </div>
+      </section>
+
       {/* ============ ABOUT PREVIEW ============ */}
-      <section className="alt-band" aria-labelledby="about-title">
+      <section aria-labelledby="about-title">
         <div className="container two-col">
           <div className="about-figure reveal">
             <h3>Dt. Garima Goel</h3>

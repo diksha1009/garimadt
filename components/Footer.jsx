@@ -7,24 +7,27 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h4>Dt. Garima&apos;s Diet Clinic</h4>
+            <h4>Poshan by Dt. Garima</h4>
+            <p className="footer-descriptor">Clinical Nutrition &amp; Lifestyle Care</p>
             <p>
-              Personalised nutrition consultancy for a healthy and disease-free lifestyle.
-              Online consultations available across India and abroad.
+              Personalised diet plans and online consultations for a healthy,
+              disease-free life — across India and abroad.
             </p>
-            <p className="footer-tagline">Your health, my priority. 🌿</p>
+            <p className="footer-tagline">Nutrition that fits your life. 🌿</p>
           </div>
           <div>
             <h4>Quick Links</h4>
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about/">About</Link></li>
-              <li><Link href="/services/">Services</Link></li>
+              <li><Link href="/services/">Specialities</Link></li>
+              <li><Link href="/programs/">Programs &amp; Pricing</Link></li>
               <li><Link href="/contact/">Contact</Link></li>
+              <li><Link href="/work-ethics/">Work Ethics &amp; Terms</Link></li>
             </ul>
           </div>
           <div>
-            <h4>Specialities</h4>
+            <h4>Popular Programs</h4>
             <ul>
               <li><Link href="/services/">Weight Management</Link></li>
               <li><Link href="/services/">PCOS / PCOD Diet</Link></li>
@@ -54,8 +57,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Dt. Garima&apos;s Diet Clinic. All rights reserved.</span>
-          <span>Eat Right. Live Light. Feel Amazing.</span>
+          <span>© {new Date().getFullYear()} Poshan by Dt. Garima. All rights reserved.</span>
+          <span>Nourish · Balance · Thrive</span>
         </div>
       </div>
     </footer>
