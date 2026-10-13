@@ -30,7 +30,7 @@ export default function ProgramCard({ program, compact = false }) {
         )}
       </ul>
 
-      <Link className={`btn ${popular ? 'btn-primary' : 'btn-outline'} program-cta`} href="/contact/">
+      <Link className={`btn ${popular ? 'btn-primary' : 'btn-outline'} program-cta`} href="/contact">
         {cta}
       </Link>
     </article>

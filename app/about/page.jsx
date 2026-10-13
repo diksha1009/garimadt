@@ -4,7 +4,7 @@ export const metadata = {
   title: 'About',
   description:
     'Meet Dt. Garima Goel — B.Sc. Home Science, M.Sc. Food & Nutrition, trained at PGIMER Chandigarh, formerly with Fitelo, and pursuing a PhD in Food and Nutrition.',
-  alternates: { canonical: '/about/' },
+  alternates: { canonical: '/about' },
 };
 
 const CheckIcon = ({ stroke = 'currentColor' }) => (
@@ -214,8 +214,8 @@ export default function AboutPage() {
               <p>Book a one-on-one consultation — online, from anywhere.</p>
             </div>
             <div className="actions">
-              <Link className="btn btn-primary" href="/contact/">Book Consultation</Link>
-              <Link className="btn btn-outline" href="/services/" style={{ borderColor: '#fff', color: '#fff' }}>
+              <Link className="btn btn-primary" href="/contact">Book Consultation</Link>
+              <Link className="btn btn-outline" href="/services" style={{ borderColor: '#fff', color: '#fff' }}>
                 View Specialities
               </Link>
             </div>

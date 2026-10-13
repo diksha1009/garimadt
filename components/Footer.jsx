@@ -19,21 +19,21 @@ export default function Footer() {
             <h4>Quick Links</h4>
             <ul>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/about/">About</Link></li>
-              <li><Link href="/services/">Specialities</Link></li>
-              <li><Link href="/programs/">Programs &amp; Pricing</Link></li>
-              <li><Link href="/contact/">Contact</Link></li>
-              <li><Link href="/work-ethics/">Work Ethics &amp; Terms</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/services">Specialities</Link></li>
+              <li><Link href="/programs">Programs &amp; Pricing</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/work-ethics">Work Ethics &amp; Terms</Link></li>
             </ul>
           </div>
           <div>
             <h4>Popular Programs</h4>
             <ul>
-              <li><Link href="/services/">Weight Management</Link></li>
-              <li><Link href="/services/">PCOS / PCOD Diet</Link></li>
-              <li><Link href="/services/">Diabetes &amp; Hypertension</Link></li>
-              <li><Link href="/services/">Thyroid Management</Link></li>
-              <li><Link href="/services/">Pre-Wedding Plans</Link></li>
+              <li><Link href="/services">Weight Management</Link></li>
+              <li><Link href="/services">PCOS / PCOD Diet</Link></li>
+              <li><Link href="/services">Diabetes &amp; Hypertension</Link></li>
+              <li><Link href="/services">Thyroid Management</Link></li>
+              <li><Link href="/services">Pre-Wedding Plans</Link></li>
             </ul>
           </div>
           <div>

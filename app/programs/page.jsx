@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Programs & Pricing',
   description:
     'Nutrition programs with Dt. Garima Goel — Nutrition Kickstart (4 weeks, ₹2,999), Health Transformation (12 weeks, ₹7,999), Clinical Nutrition Care (12 weeks, ₹10,999) and Pre-Wedding Nutrition (8 weeks, ₹7,999).',
-  alternates: { canonical: '/programs/' },
+  alternates: { canonical: '/programs' },
 };
 
 const OFFERS_JSONLD = {
@@ -72,7 +72,7 @@ export default function ProgramsPage() {
                 <strong>{CONSULTATION.priceLabel}</strong>. {CONSULTATION.note}
               </p>
             </div>
-            <Link className="btn btn-primary" href="/contact/">Book Consultation</Link>
+            <Link className="btn btn-primary" href="/contact">Book Consultation</Link>
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function ProgramsPage() {
 
           <p className="program-terms-note">
             Programs are subject to the{' '}
-            <Link href="/work-ethics/">work ethics, terms &amp; conditions</Link> — please read
+            <Link href="/work-ethics">work ethics, terms &amp; conditions</Link> — please read
             them before enrolling.
           </p>
         </div>

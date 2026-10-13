@@ -7,10 +7,10 @@ import { usePathname } from 'next/navigation';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/about/', label: 'About' },
-  { href: '/services/', label: 'Specialities' },
-  { href: '/programs/', label: 'Programs' },
-  { href: '/contact/', label: 'Contact' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Specialities' },
+  { href: '/programs', label: 'Programs' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header({ hasLogo = false }) {
@@ -89,7 +89,7 @@ export default function Header({ hasLogo = false }) {
           </nav>
 
           <div className="nav-cta">
-            <Link className="btn btn-primary" href="/contact/">
+            <Link className="btn btn-primary" href="/contact">
               Book Consultation
             </Link>
             <button

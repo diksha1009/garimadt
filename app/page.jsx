@@ -198,8 +198,8 @@ export default function HomePage() {
               your kitchen and your goals — no crash diets, no starvation.
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" href="/contact/">Book a Consultation</Link>
-              <Link className="btn btn-outline" href="/services/">View Specialities</Link>
+              <Link className="btn btn-primary" href="/contact">Book a Consultation</Link>
+              <Link className="btn btn-outline" href="/services">View Specialities</Link>
             </div>
             <div className="hero-stats">
               <div><strong>M.Sc.</strong><span>Food &amp; Nutrition</span></div>
@@ -388,7 +388,7 @@ export default function HomePage() {
                 <strong>{CONSULTATION.priceLabel}</strong>. {CONSULTATION.note}
               </p>
             </div>
-            <Link className="btn btn-primary" href="/programs/">See All Programs</Link>
+            <Link className="btn btn-primary" href="/programs">See All Programs</Link>
           </div>
         </div>
       </section>
@@ -429,7 +429,7 @@ export default function HomePage() {
               <li><CheckIcon />Certified under Dt. Loveleen Kaur (Santushti)</li>
             </ul>
             <div style={{ marginTop: '1.8rem' }}>
-              <Link className="btn btn-outline" href="/about/">Know More About Me</Link>
+              <Link className="btn btn-outline" href="/about">Know More About Me</Link>
             </div>
           </div>
         </div>

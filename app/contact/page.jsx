@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Contact & Book Consultation',
   description:
     'Book an online diet consultation with Dt. Garima Goel. Call or WhatsApp +91 73409 40620. Consultation hours: Mon–Sat, 10 AM – 1 PM & 2 – 5 PM.',
-  alternates: { canonical: '/contact/' },
+  alternates: { canonical: '/contact' },
 };
 
 const WA_LINK =

@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Work Ethics & Terms',
   description:
     'Work ethics, terms and conditions for consultations and programs with Poshan by Dt. Garima — how we work together, what to expect, and program, payment and refund policies.',
-  alternates: { canonical: '/work-ethics/' },
+  alternates: { canonical: '/work-ethics' },
 };
 
 const SECTIONS = [
@@ -121,7 +121,7 @@ export default function WorkEthicsPage() {
               <a className="btn btn-whatsapp" href={WA_LINK} target="_blank" rel="noopener noreferrer">
                 WhatsApp Me
               </a>
-              <Link className="btn btn-primary" href="/contact/">Contact</Link>
+              <Link className="btn btn-primary" href="/contact">Contact</Link>
             </div>
           </div>
         </div>

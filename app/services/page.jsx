@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Specialities',
   description:
     'Personalised diet plans, nutritional counselling and online consultations for weight management, PCOS/PCOD, thyroid, diabetes, hypertension, pre-wedding plans, pediatric nutrition and therapeutic diets.',
-  alternates: { canonical: '/services/' },
+  alternates: { canonical: '/services' },
 };
 
 const SERVICES = [
