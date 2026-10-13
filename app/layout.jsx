@@ -48,9 +48,11 @@ export const metadata = {
     title: 'Poshan by Dt. Garima | Clinical Nutrition & Lifestyle Care',
     description:
       'Personalised diet plans and online nutrition consultations for a healthy, disease-free lifestyle.',
+    images: ['/og.png'],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og.png'],
     title: 'Poshan by Dt. Garima | Clinical Nutrition & Lifestyle Care',
     description:
       'Personalised diet plans and online nutrition consultations for a healthy, disease-free lifestyle.',
