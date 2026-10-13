@@ -1,0 +1,9 @@
+{
+  "name": "garimadt",
+  "compatibility_date": "2026-10-13",
+  // Static export only — no server code, Workers just serves ./out
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
