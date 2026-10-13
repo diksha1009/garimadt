@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://www.dtgarimagoel.com'),
+  metadataBase: new URL('https://poshanbygarima.com'),
   title: {
     default: 'Poshan by Dt. Garima | Dietitian & Nutritionist — Online Diet Consultation',
     template: '%s | Poshan by Dt. Garima',

@@ -39,7 +39,7 @@ export default function Header({ hasLogo = false }) {
               <>
                 <span className="brand-logo">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`}
+                    src="/logo.png"
                     alt="Poshan by Dt. Garima"
                     width={236}
                     height={187}

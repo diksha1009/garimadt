@@ -6,12 +6,12 @@ import { WA_LINK, REVIEW_FORM_URL } from '../lib/site';
 const CLINIC_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  '@id': 'https://www.dtgarimagoel.com/#clinic',
+  '@id': 'https://poshanbygarima.com/#clinic',
   name: 'Poshan by Dt. Garima',
   alternateName: "Dt. Garima's Diet Clinic",
   description:
     'Clinical nutrition and lifestyle care — personalised diet plans and online consultations for a healthy, disease-free life.',
-  url: 'https://www.dtgarimagoel.com/',
+  url: 'https://poshanbygarima.com/',
   telephone: '+91-7340940620',
   sameAs: ['https://www.instagram.com/nutrinator_'],
   priceRange: '₹₹',
@@ -31,7 +31,7 @@ const CLINIC_JSONLD = {
   ],
   founder: {
     '@type': 'Person',
-    '@id': 'https://www.dtgarimagoel.com/#garima',
+    '@id': 'https://poshanbygarima.com/#garima',
     name: 'Garima Goel',
     honorificPrefix: 'Dt.',
     jobTitle: 'Dietitian & Nutritionist',

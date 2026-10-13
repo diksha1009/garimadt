@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.dtgarimagoel.com';
+const BASE_URL = 'https://poshanbygarima.com';
 
 export const dynamic = 'force-static';
 

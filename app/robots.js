@@ -3,6 +3,6 @@ export const dynamic = 'force-static';
 export default function robots() {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://www.dtgarimagoel.com/sitemap.xml',
+    sitemap: 'https://poshanbygarima.com/sitemap.xml',
   };
 }
